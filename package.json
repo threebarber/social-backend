@@ -1,0 +1,25 @@
+{
+  "name": "social-backend",
+  "version": "1.0.0",
+  "description": "backend for social media app",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/threebarber/social-backend.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/threebarber/social-backend/issues"
+  },
+  "homepage": "https://github.com/threebarber/social-backend#readme",
+  "dependencies": {
+    "bad-words": "^3.0.4",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "mongoose": "^7.0.3"
+  }
+}
