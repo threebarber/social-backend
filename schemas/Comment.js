@@ -2,27 +2,22 @@ const mongoose = require('mongoose')
 require('dotenv').config()
 
 
-const postSchema = new mongoose.Schema({
-  postId: {
-    type: mongoose.Types.ObjectId,
-  },
+const commentSchema = new mongoose.Schema({
   userId: {
     type: String,
     required: true,
   },
-  postTitle:{
+  postId: {
     type: String,
-    minLength: 5,
     required: true
   },
-  postContent:{
+  commentContent: {
     type: String,
-    minLength: 5,
-    required: true
+    required: true,
   }
 })
 
-postSchema.set('toJSON', {
+commentSchema.set('toJSON', {
   transform: (document, returnedObject) => {
     returnedObject.id = returnedObject._id.toString()
     delete returnedObject._id
@@ -30,4 +25,4 @@ postSchema.set('toJSON', {
   }
 })
 
-module.exports = mongoose.model('Post', postSchema)
+module.exports = mongoose.model('Comment', commentSchema)
